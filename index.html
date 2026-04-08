@@ -336,5 +336,14 @@
         } 
       }); 
 
+      function updateWindowSize() { 
+        const w = window.innerWidth; 
+        const h = window.innerHeight; 
+        windowSizeSpan.textContent = `${w} x ${h} px`; 
+      } 
+
+      // BOM: resize event on the window object 
+      window.addEventListener("resize", updateWindowSize); 
+
     </script> 
 </body> 
